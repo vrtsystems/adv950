@@ -36,6 +36,7 @@
 #include <linux/serial_core.h>
 #include <linux/delay.h>
 #include <linux/mutex.h>
+#include <linux/sched/signal.h>
 
 #include <asm/irq.h>
 #include <asm/uaccess.h>
