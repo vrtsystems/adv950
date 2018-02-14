@@ -36,7 +36,14 @@
 #include <linux/serial_core.h>
 #include <linux/delay.h>
 #include <linux/mutex.h>
+
+#include <linux/version.h>
+
+#if LINUX_VERSION_CODE < KERNEL_VERSION(4,11,0)
+#include <linux/signal.h>
+#else
 #include <linux/sched/signal.h>
+#endif
 
 #include <asm/irq.h>
 #include <asm/uaccess.h>
